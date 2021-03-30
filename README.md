@@ -1,8 +1,8 @@
-# Framer Motion Testing
+# Framer Motion Practice
 
 ## Description
 
-A collection of mock components created while using and learning Framer Motion.
+A collection of mock components created while learning Framer Motion.
 
 ## Technologies
 
@@ -18,11 +18,11 @@ Enter your project directory
 
 Clone the repository
 
-`git clone <>`
+`git clone git@github.com:Personal-Library/framer-motion-practice.git`
 
 Move into the created directory
 
-`cd framer-motion-testing`
+`cd framer-motion-practice`
 
 Install dependencies
 
