@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 const Wrapper = styled.div`
-	height: 60vh;
+	height: 50vh;
 	width: 100%;
 	display: flex;
 	flex-direction: row;
@@ -12,6 +12,7 @@ const Wrapper = styled.div`
 	gap: 2rem;
 	div {
 		font-size: 7rem;
+		font-weight: 600;
 		p {
 			display: inline-block;
 			margin-left: 1rem;
@@ -46,12 +47,35 @@ const item = {
 };
 
 const Heading = () => {
+	const dinoHover = (letter) => {
+		switch (letter) {
+			case '🦕':
+				return { scale: 1.25, rotateZ: 20 };
+			default:
+				return { rotateZ: 30 };
+		}
+	};
+
+	const dinoTransition = (letter) => {
+		switch (letter) {
+			case '🦕':
+				return { ease: [0.98, 0, 0.15, 0.95], duration: 0.5 };
+			default:
+				return { type: 'spring', bounce: 0.5, velocity: 2, restSpeed: 0.5, duration: 1 };
+		}
+	};
+
 	return (
 		<Wrapper>
 			<motion.div variants={container} initial='hidden' animate='show'>
 				{name.map((letter, idx) => {
 					return (
-						<motion.p key={idx} variants={item}>
+						<motion.p
+							key={idx}
+							variants={item}
+							whileHover={dinoHover(letter)}
+							transition={dinoTransition(letter)}
+						>
 							{letter}
 						</motion.p>
 					);

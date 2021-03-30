@@ -30,7 +30,9 @@ Install dependencies
 
 ## Usage
 
-This project is in development
+The user can play with an interactive header, animated flip cards for more information.
+
+![Demo of the components created with Framer Motion](https://media.giphy.com/media/7uIX7O4jHxnazGMt0e/giphy.gif)
 
 ## Contributing
 
